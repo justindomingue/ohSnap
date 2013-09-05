@@ -1,6 +1,8 @@
 OhSnap!.js
 =========
 
+> Oh Snap ! The server crashed... Try again later :D
+
 A simple notification jQuery/Zepto library designed to be used in mobile apps
 
 Installation
