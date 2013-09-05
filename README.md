@@ -22,4 +22,4 @@ To remove a notification, use `ohSnapX()`.
 
 Alerts are automatically bound to a click event (internally, `ohSnapX()` is called when the alert is clicked).
 
-By Justin Domingue
+By **Justin Domingue**
