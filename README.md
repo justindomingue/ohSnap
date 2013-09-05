@@ -10,7 +10,9 @@ Just link the js file around your body end tag :
 
     <script src="js/ohsnap.js"></script>
 
-OhSnap!.js creates a div with classes `.alert .alert-color` so you will want to have something like :
+The library relies on [animate.css](http://daneden.me/animate/) for the in/out animations.
+
+Furthermore, OhSnap!.js creates a div with classes `.alert .alert-color` so you will want to have something like :
 
     /* ALERTS */
     /* inspired by Twitter Bootstrap */
