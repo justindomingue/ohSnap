@@ -12,7 +12,9 @@ Just link the js file around your body end tag :
 
     <script src="js/ohsnap.js"></script>
 
-The library relies on [animate.css](http://daneden.me/animate/) for the in/out animations.
+Also add a `div` which will contain the alerts :
+
+    <div id="ohsnap"></div>
 
 Furthermore, OhSnap!.js creates a div with classes `.alert .alert-color` so you will want to have something like :
 
@@ -27,6 +29,9 @@ Furthermore, OhSnap!.js creates a div with classes `.alert .alert-color` so you 
       position: absolute;
       bottom: 0px;
       right: 21px;
+      /* Each alert has its own width */
+      float: right; 
+      clear: right;
     }
 
     .alert-red {
@@ -49,6 +54,7 @@ Furthermore, OhSnap!.js creates a div with classes `.alert .alert-color` so you 
       color:white;
       background-color: #E9573F;
     }
+
 Usage
 -----
 
