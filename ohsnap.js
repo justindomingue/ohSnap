@@ -13,7 +13,7 @@ function ohSnap(text, color) {
   // Available colors : red, green, blue, orange, yellow --- add your own!
   
   // Set some variables
-  var time = '1000';
+  var time = '5000';
   var $container = $('#ohsnap');
 
   // Generate the HTML
