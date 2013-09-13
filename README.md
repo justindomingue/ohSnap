@@ -10,6 +10,8 @@ Check out this [demo page](http://justindomingue.github.io/ohSnap/ "Demo")
 Installation
 ------------
 
+Dependency: jQuery or Zepto.
+
 Just link the js file around your body end tag :
 
     <script src="js/ohsnap.js"></script>
