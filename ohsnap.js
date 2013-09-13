@@ -24,7 +24,7 @@ function ohSnap(text, color) {
   
   // After 'time' seconds, the animation fades out
   setTimeout(function () {
-    ohSnapX($container.children('.alert').last());
+    ohSnapX($container.children('.alert').first());
   }, time);
 }
 
