@@ -5,6 +5,8 @@ OhSnap!.js
 
 A simple notification jQuery/Zepto library designed to be used in mobile apps
 
+Check out this [demo page](http://justindomingue.github.io/ohSnap/ "Demo")
+
 Installation
 ------------
 
