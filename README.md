@@ -3,7 +3,7 @@ OhSnap!.js
 
 > Oh Snap ! The server crashed... Try again later :D
 
-A simple notification jQuery/Zepto library designed to be used in mobile apps
+A simple jQuery/Zepto notification library designed to be used in mobile apps
 
 Check out this [demo page](http://justindomingue.github.io/ohSnap/ "Demo")
 
