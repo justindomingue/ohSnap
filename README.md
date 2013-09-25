@@ -12,7 +12,7 @@ Installation
 
 Dependency: jQuery or Zepto.
 
-Just link the js file around your body end tag :
+Link the JS file somewhere in your HTML :
 
     <script src="js/ohsnap.js"></script>
 
