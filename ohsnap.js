@@ -1,6 +1,6 @@
 /**
  * == OhSnap!.js ==
- * A simple notification jQuery/Zepto library designed to be used in mobile apps
+ * A simple jQuery/Zepto notification library designed to be used in mobile apps
  *
  * author: Justin Domingue
  * date: september 5, 2013
