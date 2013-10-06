@@ -71,4 +71,9 @@ To remove a notification, use `ohSnapX()`.
 
 Alerts are automatically bound to a click event (internally, `ohSnapX()` is called when the alert is clicked).
 
+TODO
+----
+ *  Add more options when calling ohSnap
+ *  Replace jQuery.live() by jQuery.on()
+
 By **Justin Domingue**
