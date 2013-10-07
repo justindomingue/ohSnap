@@ -8,7 +8,7 @@
  * copyright - nice copyright over here
  */
 
-function ohSnap(text, color) {
+function ohSnap(icon, text, color) {
   // text : message to show (HTML tag allowed)
   // Available colors : red, green, blue, orange, yellow --- add your own!
   
@@ -17,7 +17,7 @@ function ohSnap(text, color) {
   var $container = $('#ohsnap');
 
   // Generate the HTML
-  var html = '<div class="alert alert-' + color + '">' + text + '</div>';
+  var html = '<div class="alert alert-' + color + '"><span class="' + icon + '"></span> ' + text + '</div>';
 
   // Append the label to the container
   $container.append(html);
