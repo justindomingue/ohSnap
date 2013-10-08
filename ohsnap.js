@@ -8,7 +8,7 @@
  * copyright - nice copyright over here
  */
 
-function ohSnap(icon, text, color) {
+function ohSnap(text, color, icon) {
   // text : message to show (HTML tag allowed)
   // Available colors : red, green, blue, orange, yellow --- add your own!
   
