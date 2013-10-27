@@ -3,7 +3,7 @@ OhSnap!.js
 
 > Oh Snap ! The server crashed... Try again later :D
 
-A simple notification jQuery/Zepto library designed to be used in mobile apps
+A simple jQuery/Zepto notification library designed to be used in mobile apps
 
 Check out this [demo page](http://justindomingue.github.io/ohSnap/ "Demo")
 
@@ -12,7 +12,7 @@ Installation
 
 Dependency: jQuery or Zepto.
 
-Just link the js file around your body end tag :
+Link the JS file somewhere in your HTML :
 
     <script src="js/ohsnap.js"></script>
 
@@ -70,5 +70,10 @@ To call a notification, use `ohSnap(text, color)`. Examples :
 To remove a notification, use `ohSnapX()`.
 
 Alerts are automatically bound to a click event (internally, `ohSnapX()` is called when the alert is clicked).
+
+TODO
+----
+ *  Add more options when calling ohSnap
+ *  Replace jQuery.live() by jQuery.on()
 
 By **Justin Domingue**
