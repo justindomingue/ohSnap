@@ -15,9 +15,15 @@ function ohSnap(text, color, icon) {
   // Set some variables
   var time = '5000';
   var $container = $('#ohsnap');
-
+  
+  var icon_markup = "";
+  
+  if(icon) {
+    icon_markup = "<span class='" + icon + "'></span> ";  
+  }
+  
   // Generate the HTML
-  var html = '<div class="alert alert-' + color + '"><span class="' + icon + '"></span> ' + text + '</div>';
+  var html = '<div class="alert alert-' + color + '">' + icon_markup + text + '</div>';
 
   // Append the label to the container
   $container.append(html);
