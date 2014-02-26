@@ -41,6 +41,6 @@ function ohSnapX(element) {
 
 // Remove the notification on click
 
-$('.alert').live('click', function() { 
+$('.alert').on('click', function() { 
   ohSnapX($(this))
 });
