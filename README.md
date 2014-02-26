@@ -62,9 +62,9 @@ Furthermore, OhSnap!.js creates a div with classes `.alert .alert-color` so you 
 Usage
 -----
 
-To call a notification, use `ohSnap(text, color)`. Examples :
+To call a notification, use `ohSnap(text, color, icon)`. Examples :
 
-    ohSnap('Oh Snap! I cannot process your card...', 'red');
+    ohSnap('Oh Snap! I cannot process your card...', 'red', 'icon-alert');
     ohSnap('Yeeaahh! You are now registered.', 'green');
 
 To remove a notification, use `ohSnapX()`.
