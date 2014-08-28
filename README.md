@@ -74,6 +74,5 @@ Alerts are automatically bound to a click event (internally, `ohSnapX()` is call
 TODO
 ----
  *  Add more options when calling ohSnap
- *  Replace jQuery.live() by jQuery.on()
 
 By **Justin Domingue**
