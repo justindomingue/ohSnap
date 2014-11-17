@@ -23,10 +23,13 @@ function ohSnap(text, color, icon) {
   }
   
   // Generate the HTML
-  var html = '<div class="alert alert-' + color + '">' + icon_markup + text + '</div>';
+  var html = $('<div class="alert alert-' + color + '">' + icon_markup + text + '</div>');
 
   // Append the label to the container
   $container.append(html);
+
+  // Remove the notification on click
+  html.on('click', function () { ohSnapX($(this)); });
   
   // After 'time' seconds, the animation fades out
   setTimeout(function () {
@@ -44,9 +47,3 @@ function ohSnapX(element) {
     $('.alert').remove();
   }
 }
-
-// Remove the notification on click
-
-$('.alert').on('click', function() { 
-  ohSnapX($(this))
-});
