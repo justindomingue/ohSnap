@@ -1,0 +1,25 @@
+{
+  "name": "ohsnap",
+  "main": "ohSnap.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/justindominbue/ohSnap",
+  "authors": [
+    "justindomingue <justin.domingue@hotmail.com>"
+  ],
+  "description": "A simple jQuery/Zepto notification library designed to be used in mobile apps",
+  "keywords": [
+    "notification",
+    "mobile",
+    "jquery",
+    "zepto"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+    "*.md"
+  ]
+}
