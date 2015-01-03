@@ -9,10 +9,10 @@ Check out this [demo page](http://justindomingue.github.io/ohSnap/ "Demo")
 
 ## Installation
 
-Dependency: jQuery or Zepto.
+Dependency: [jQuery](http://jquery.com) or [Zepto](http://zeptojs.com).
 
-Download from [Github](https://raw.githubusercontent.com/justindomingue/ohSnap/master/ohsnap.js)
-Dowload with Bower: `bower install oh-snap`.
+- Download from [Github](https://raw.githubusercontent.com/justindomingue/ohSnap/master/ohsnap.js)
+- Dowload with Bower: `bower install oh-snap`.
 
 Add a `div.ohsnap` which will contain the alerts :
 
