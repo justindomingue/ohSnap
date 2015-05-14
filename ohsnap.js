@@ -8,17 +8,16 @@
  * copyright - nice copyright over here
  */
 function ohSnap(text, color, icon) {
-    var icon_markup, html
+    var icon_markup, html,
         time = '5000',
-        $container = $('#ohsnap'),
-        speed = 'fast';
+        $container = $('#ohsnap');
 
     if (icon) {
         icon_markup = "<span class='" + icon + "'></span> ";
     }
 
     // Generate the HTML
-    html = $('<div class="alert alert-' + color + '">' + icon_markup + text + '</div>').fadeIn( speed );
+    html = $('<div class="alert alert-' + color + '">' + icon_markup + text + '</div>').fadeIn('fast');
 
     // Append the label to the container
     $container.append(html);
@@ -39,12 +38,12 @@ function ohSnapX(element) {
     // element must be a jQuery object
 
     if (typeof element !== "undefined") {
-        element.fadeOut( speed, function(){
-            $( this ).remove();
+        element.fadeOut('fast', function() {
+            $(this).remove();
         });
     } else {
-        $('.alert').fadeOut( speed, function(){
-            $( this ).remove();
+        $('.alert').fadeOut('fast', function() {
+            $(this).remove();
         });
     }
 }
