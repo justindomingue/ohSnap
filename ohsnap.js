@@ -7,8 +7,15 @@
  * version: 0.1.3
  * copyright - nice copyright over here
  */
+
+/* Shows a toast on the page
+ * Params:
+ *  text: text to show
+ *  color: color of the toast. one of red, green, blue, orange, yellow or custom
+*/
 function ohSnap(text, color, icon) {
-    var icon_markup, html,
+    var icon_markup = "",
+        html,
         time = '5000',
         $container = $('#ohsnap');
 
