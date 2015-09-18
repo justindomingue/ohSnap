@@ -3,8 +3,8 @@
  * A simple jQuery/Zepto notification library designed to be used in mobile apps
  *
  * author: Justin Domingue
- * date: september 5, 2013
- * version: 0.1.3
+ * date: september 18, 2015
+ * version: 0.1.4
  * copyright - nice copyright over here
  */
 
