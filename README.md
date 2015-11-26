@@ -19,13 +19,26 @@ Add a `div.ohsnap` which will contain the alerts :
 
     <div id="ohsnap"></div>
 
+Usage
+-----
+
+To call a notification, use `ohSnap(text, options)`. Examples :
+
+    osSnap('Succefully created your account');
+    ohSnap('Oh Snap! I cannot process your card...', {color: 'red', icon: 'icon-alert'}); // color matches CSS class `.alert.color`
+    ohSnap('Yeeaahh! You are now registered.', {time: '2000'} // time is ms
+
+To remove a notification, use `ohSnapX()`.
+
+Alerts are automatically bound to a click event (internally, `ohSnapX()` is called when the alert is clicked).
+
 ### Styling
 
 Furthermore, ohSnap.js creates a div with classes `.alert .alert-color` so you will want to have something like :
 
     /* ALERTS */
     /* inspired by Twitter Bootstrap */
-   
+
     .alert {
       padding: 15px;
       margin-bottom: 20px;
@@ -35,7 +48,7 @@ Furthermore, ohSnap.js creates a div with classes `.alert .alert-color` so you w
       bottom: 0px;
       right: 21px;
       /* Each alert has its own width */
-      float: right; 
+      float: right;
       clear: right;
     }
 
@@ -60,16 +73,5 @@ Furthermore, ohSnap.js creates a div with classes `.alert .alert-color` so you w
       background-color: #E9573F;
     }
 
-Usage
------
-
-To call a notification, use `ohSnap(text, color, icon)`. Examples :
-
-    ohSnap('Oh Snap! I cannot process your card...', 'red', 'icon-alert');
-    ohSnap('Yeeaahh! You are now registered.', 'green');
-
-To remove a notification, use `ohSnapX()`.
-
-Alerts are automatically bound to a click event (internally, `ohSnapX()` is called when the alert is clicked).
 
 By **Justin Domingue**
