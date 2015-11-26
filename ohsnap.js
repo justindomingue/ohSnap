@@ -27,18 +27,18 @@ function ohSnap(text, options) {
     'fade-duration': 'fast',  // duration of the fade in/out of the alerts. fast, slow or integer in ms
   }
 
-  options = (typeof options == 'object') $.extend(defaultOptions, options) ? defaultOptions;)
+  options = (typeof options == 'object') ? $.extend(defaultOptions, options) : defaultOptions;
 
-  var $container = #('#'+options['container-id']),
+  var $container = $('#'+options['container-id']),
     icon_markup = "",
     color_markup = "";
 
     if (options.icon) {
-        icon_markup = "<span class='" + icon + "'></span> ";
+        icon_markup = "<span class='" + options.icon + "'></span> ";
     }
 
     if (options.color) {
-      color_markup = 'alert-' + color;
+      color_markup = 'alert-' + options.color;
     }
 
     // Generate the HTML
@@ -70,7 +70,7 @@ function ohSnapX(element, options) {
       'duration': 'fast'
     }
 
-    options = (typeof options == 'object') $.extend(defaultOptions, options) ? defaultOptions;)
+    options = (typeof options == 'object') ? $.extend(defaultOptions, options) : defaultOptions;
 
     if (typeof element !== "undefined") {
         element.fadeOut(options.duration, function() {
