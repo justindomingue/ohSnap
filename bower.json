@@ -1,7 +1,7 @@
 {
   "name": "oh-snap",
   "main": "ohSnap.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/justindominbue/ohSnap",
   "authors": [
     "justindomingue <justin.domingue@hotmail.com>"
