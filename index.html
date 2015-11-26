@@ -44,6 +44,7 @@
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Demo</h2>
 
 <div class="buttons">
+  <p><a class="button" id="default"><span>Default</span></a></p>
   <p><a class="button" id="red"><span>Error</span></a></p>
   <p><a class="button" id="green"><span>Success</span></a></p>
   <p><a class="button" id="blue"><span>Info</span></a></p>
@@ -66,6 +67,29 @@
 <pre><code>&lt;div id="ohsnap"&gt;&lt;/div&gt;
 </code></pre>
 
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>To call a notification, use <code>ohSnap(text, options)</code>. Examples :</p>
+
+<pre><code>ohSnap('Oh Snap! I cannot process your card...', {color: 'red'});  // alert will have class 'alert-color'
+ohSnap('Yeeaahh! You are now registered.', {'duration':'2000'});  // 2 seconds
+</code></pre>
+
+<pre><code>
+options: object that can override the following options
+     color: alert will have class 'alert-color'. Default null
+     icon: class of the icon to show before the alert. Default null
+     duration: duration of the notification in ms. Default 5000ms
+     container-id: id of the alert container. Default 'ohsnap'
+     fade-duration: duration of the fade in/out of the alerts. Default 'fast'
+</code></pre>
+
+<p>To programatically remove a notification, use <code>ohSnapX(element)</code> where element is a jQuery object a containing  the alert..</p>
+<p>To remove all notifications, use <code>ohSnapX()</code>.</p>
+
+<p>Alerts are automatically bound to a click event (internally, <code>ohSnapX()</code> is called when the alert is clicked).</p>
+
 <p>Furthermore, OhSnap!.js creates a div with classes <code>.alert .alert-color</code> so you will want to have something like :</p>
 
 <pre><code>/* ALERTS */
@@ -82,6 +106,7 @@
   /* Each alert has its own width */
   float: right;
   clear: right;
+  background-color: white;
 }
 
 .alert-red {
@@ -105,19 +130,6 @@
   background-color: #E9573F;
 }
 </code></pre>
-
-<h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
-
-<p>To call a notification, use <code>ohSnap(text, color)</code>. Examples :</p>
-
-<pre><code>ohSnap('Oh Snap! I cannot process your card...', 'red');
-ohSnap('Yeeaahh! You are now registered.', 'green');
-</code></pre>
-
-<p>To remove a notification, use <code>ohSnapX()</code>.</p>
-
-<p>Alerts are automatically bound to a click event (internally, <code>ohSnapX()</code> is called when the alert is clicked).</p>
 
 <p>By <strong>Justin Domingue</strong></p>
 
