@@ -42,7 +42,7 @@ function ohSnap(text, options) {
     }
 
     // Generate the HTML
-    html = $('<div class="alert ' + color_markup + '">' + icon_markup + text + '</div>').fadeIn(options['fade-duration']);
+    var html = $('<div class="alert ' + color_markup + '">' + icon_markup + text + '</div>').fadeIn(options['fade-duration']);
 
     // Append the label to the container
     $container.append(html);
