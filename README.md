@@ -24,7 +24,7 @@ Usage
 
 To call a notification, use `ohSnap(text, options)`. Examples :
 
-    osSnap('Succefully created your account');
+    ohSnap('Succefully created your account');
     ohSnap('Oh Snap! I cannot process your card...', {color: 'red', icon: 'icon-alert'}); // color matches CSS class `.alert.color`
     ohSnap('Yeeaahh! You are now registered.', {time: '2000'} // time is ms
 
