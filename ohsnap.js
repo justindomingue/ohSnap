@@ -40,6 +40,7 @@ function ohSnap(text, options) {
     if (options.color) {
       color_markup = 'alert-' + options.color;
     }
+
     // Generate the HTML
     var backgroundColor="white";
     backgroundColor=(options.color=="red"?"#DA4453":
@@ -70,23 +71,18 @@ function ohSnap(text, options) {
  * params:
  *    Called without arguments, the function removes all alerts
  *    element: a jQuery object to remove
- *    options:
- *      duration: duration of the alert fade out - 'fast', 'slow' or time in ms. Default 'fast'
+ *    duration: duration of the alert fade out - 'fast', 'slow' or time in ms. Default 'fast'
  */
-function ohSnapX(element, options) {
-    defaultOptions = {
-      'duration': 'fast'
-    }
+function ohSnapX(element, duration) {
 
-    options = (typeof options == 'object') ? $.extend(defaultOptions, options) : defaultOptions;
-
-    if (typeof element !== "undefined") {
-        element.fadeOut(options.duration, function() {
-            $(this).remove();
-        });
-    } else {
-        $('.alert').fadeOut(options.duration, function() {
-            $(this).remove();
-        });
-    }
+  if(!duration) duration="fast";
+  if (typeof element !== "undefined") {
+      element.fadeOut(duration, function() {
+          $(this).remove();
+      });
+  } else {
+      $('.alert').fadeOut(duration, function() {
+          $(this).remove();
+      });
+  }
 }
