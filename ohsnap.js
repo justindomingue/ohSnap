@@ -40,9 +40,17 @@ function ohSnap(text, options) {
     if (options.color) {
       color_markup = 'alert-' + options.color;
     }
-
     // Generate the HTML
-    var html = $('<div class="alert ' + color_markup + '">' + icon_markup + text + '</div>').fadeIn(options['fade-duration']);
+    var backgroundColor="white";
+    backgroundColor=(options.color=="red"?"#DA4453":
+                     options.color=="green"?"#37BC9B":
+                     options.color=="blue"?"#4A89DC":
+                     options.color=="yellow"?"#F6BB42":
+                     options.color=="orange"?"#ffa500":backgroundColor);
+
+    var style='padding: 15px; margin-bottom: 20px; border: 1px solid #eed3d7; border-radius: 4px; position: absolute; bottom: 0px; right: 21px; float: right; clear: right; background-color:'+backgroundColor+'; color: white;';
+    var markup='<div class="alert alert-'+options.color+'" z-index="20000" style="'+style+'">'+icon_markup + text+'</div>';
+    var html=$(markup).fadeIn(options['fade-duration']);
 
     // Append the label to the container
     $container.append(html);
