@@ -17,6 +17,7 @@
  *    duration: duration of the notification in ms. Default 5000ms
  *    container-id: id of the alert container. Default 'ohsnap'
  *    fade-duration: duration of the fade in/out of the alerts. Default 'fast'
+ *    onClick:callback for click event
 */
 function ohSnap(text, options) {
   var defaultOptions = {
@@ -59,6 +60,7 @@ function ohSnap(text, options) {
     // Remove the notification on click
     html.on('click', function() {
         ohSnapX($(this));
+        if(options.onClick)options.onClick();
     });
 
     // After 'duration' seconds, the animation fades out
