@@ -1,0 +1,25 @@
+{
+  "name": "oh-snap-notifications",
+  "version": "1.0.0",
+  "description": "A simple jQuery/Zepto notification library designed to be used in mobile apps",
+  "main": "ohsnap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justindominbue/ohSnap.git"
+  },
+  "keywords": [
+    "notification",
+    "mobile",
+    "jquery",
+    "zepto"
+  ],
+  "author": "justindomingue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justindominbue/ohSnap/issues"
+  },
+  "homepage": "https://github.com/justindominbue/ohSnap#readme"
+}
