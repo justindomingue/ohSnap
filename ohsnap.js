@@ -17,6 +17,7 @@
  *    duration: duration of the notification in ms. Default 5000ms
  *    container-id: id of the alert container. Default 'ohsnap'
  *    fade-duration: duration of the fade in/out of the alerts. Default 'fast'
+ *    onClick:callback for click event
 */
 function ohSnap(text, options) {
   var defaultOptions = {
@@ -42,7 +43,16 @@ function ohSnap(text, options) {
     }
 
     // Generate the HTML
-    var html = $('<div class="alert ' + color_markup + '">' + icon_markup + text + '</div>').fadeIn(options['fade-duration']);
+    var backgroundColor="white";
+    backgroundColor=(options.color=="red"?"#DA4453":
+                     options.color=="green"?"#37BC9B":
+                     options.color=="blue"?"#4A89DC":
+                     options.color=="yellow"?"#F6BB42":
+                     options.color=="orange"?"#ffa500":backgroundColor);
+
+    var style='padding: 15px; margin-bottom: 20px; border: 1px solid #eed3d7; border-radius: 4px; position: absolute; bottom: 0px; right: 21px; float: right; clear: right; background-color:'+backgroundColor+'; color: white;';
+    var markup='<div class="alert alert-'+options.color+'" z-index="20000" style="'+style+'">'+icon_markup + text+'</div>';
+    var html=$(markup).fadeIn(options['fade-duration']);
 
     // Append the label to the container
     $container.append(html);
@@ -50,6 +60,7 @@ function ohSnap(text, options) {
     // Remove the notification on click
     html.on('click', function() {
         ohSnapX($(this));
+        if(options.onClick)options.onClick();
     });
 
     // After 'duration' seconds, the animation fades out
@@ -62,23 +73,18 @@ function ohSnap(text, options) {
  * params:
  *    Called without arguments, the function removes all alerts
  *    element: a jQuery object to remove
- *    options:
- *      duration: duration of the alert fade out - 'fast', 'slow' or time in ms. Default 'fast'
+ *    duration: duration of the alert fade out - 'fast', 'slow' or time in ms. Default 'fast'
  */
-function ohSnapX(element, options) {
-    defaultOptions = {
-      'duration': 'fast'
-    }
+function ohSnapX(element, duration) {
 
-    options = (typeof options == 'object') ? $.extend(defaultOptions, options) : defaultOptions;
-
-    if (typeof element !== "undefined") {
-        element.fadeOut(options.duration, function() {
-            $(this).remove();
-        });
-    } else {
-        $('.alert').fadeOut(options.duration, function() {
-            $(this).remove();
-        });
-    }
+  if(!duration) duration="fast";
+  if (typeof element !== "undefined") {
+      element.fadeOut(duration, function() {
+          $(this).remove();
+      });
+  } else {
+      $('.alert').fadeOut(duration, function() {
+          $(this).remove();
+      });
+  }
 }
