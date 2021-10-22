@@ -36,38 +36,50 @@ Alerts are automatically bound to a click event (internally, `ohSnapX()` is call
 
 Furthermore, ohSnap.js creates a div with classes `.alert .alert-color` so you will want to have something like :
 
+    /* Oh Snap */
+
+    #ohsnap {
+      position: fixed;
+      bottom: 5px;
+      right:5px;
+      margin-left: 5px;
+      z-index:99;
+    }
+
     /* ALERTS */
     /* inspired by Twitter Bootstrap */
-
+    
     .alert {
+      text-align: right;
+      margin-top: 10px;
       padding: 15px;
-      margin-bottom: 20px;
       border: 1px solid #eed3d7;
       border-radius: 4px;
-      position: absolute;
-      bottom: 0px;
-      right: 21px;
-      /* Each alert has its own width */
       float: right;
       clear: right;
+      background-color: white;
     }
 
     .alert-red {
       color: white;
       background-color: #DA4453;
     }
+    
     .alert-green {
       color: white;
       background-color: #37BC9B;
     }
+    
     .alert-blue {
       color: white;
       background-color: #4A89DC;
     }
+    
     .alert-yellow {
       color: white;
       background-color: #F6BB42;
     }
+    
     .alert-orange {
       color:white;
       background-color: #E9573F;
